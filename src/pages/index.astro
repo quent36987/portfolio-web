@@ -1,0 +1,142 @@
+---
+import Layout from '../layouts/Layout.astro';
+import TimelineCard from '../components/TimelineCard.astro';
+
+const projects = [
+  {
+    title: "Aerolight",
+    description: "Application de gestion de dossiers clients pour un centre de maintenance aéronautique, incluant un système de comptes utilisateurs avec gestion fine des droits d'accès.",
+    date: "Septembre 2024",
+    technologies: ["Angular", "Spring Boot", "Docker Stack", "Synology"],
+    objective: "Développer une solution complète de gestion de maintenance d'avions avec un système d'authentification avancé",
+    links: {},
+    images: ["image1.png", "image2.png"],
+    isPrivate: true
+  },
+  {
+    title: "Cook We",
+    description: "Une API REST pour un livre de recettes, développée avec Spring Boot, incluant des fonctionnalités de gestion de comptes utilisateurs avec rôles et permissions.",
+    date: "Février 2024",
+    technologies: ["Spring Boot", "ArgoCD", "Java", "Angular"],
+    objective: "Développer une application de partage de recettes en ligne, avec une architecture bien structurée",
+    links: {
+      site: "https://cook-we.home.quentinou.ovh/home",
+      github: [
+        "https://github.com/quent36987/cook-we",
+        "https://github.com/quent36987/cook-we-app",
+        "https://github.com/quent36987/cook-we-config"
+      ]
+    },
+    images: ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png"]
+  },
+  {
+    title: "Cybermaniac",
+    description: "Création d'un site vitrine et d'une plateforme e-commerce pour un magasin d'informatique à Saint-Étienne, en utilisant Medusa pour le backend.",
+    date: "Septembre 2023",
+    technologies: ["Medusa", "TypeScript", "Svelte", "Astro"],
+    objective: "Découvrir Medusa et mettre en place un système de gestion e-commerce complet",
+    links: {
+      site: "https://cybermaniac.fr/",
+      github: [
+        "https://github.com/quent36987/cybermaniac-site-web",
+        "https://github.com/quent36987/cybermaniac-store",
+        "https://github.com/quent36987/cybermaniac-site-v2"
+      ]
+    },
+    images: ["image1.png", "image2.png"]
+  },
+  {
+    title: "EpiLead",
+    description: "Site web de simulation pour la disposition de panneaux LED sur un mur, permettant le choix des couleurs, des animations, et la création et simulation de formes et dispositions animées.",
+    date: "Juillet 2023",
+    technologies: ["Svelte", "JavaScript", "TypeScript", "Supabase", "Three.js"],
+    objective: "Développer une application de simulation pour configurer et visualiser des installations de panneaux LED avec des animations personnalisées.",
+    links: {
+      github: [
+        "https://github.com/quent36987/EpiLed"
+      ]
+    },
+    images: ["image1.png", "image2.png"],
+  },
+  {
+    title: "Web Diamant",
+    description: "Recréation en ligne du jeu de société Diamant, un jeu de prise de risque pour 3 à 8 joueurs. Implémentation avec des WebSockets pour le jeu en temps réel.",
+    date: "Avril 2023",
+    technologies: ["TypeScript", "WebSocket", "HTML", "CSS", "Apache"],
+    objective: "Découvrir les WebSockets et la création de jeux multijoueurs en temps réel",
+    links: {
+      github: ["https://github.com/quent36987/web-diamant"]
+    },
+    images: ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png"]
+  },
+  {
+    title: "Velov Notif",
+    description: "Script Python qui envoie une notification quotidienne avec la disponibilité des vélos en libre-service à Lyon, en se synchronisant avec l'emploi du temps.",
+    date: "Mars 2023",
+    technologies: ["Python", "API Vélov", "Notifications"],
+    objective: "Créer un outil pratique pour optimiser mes déplacements quotidiens",
+    links: {
+      github: ["https://github.com/quent36987/Noti-Velo"]
+    },
+    images: ["image1.png", "image2.png", "image3.png"]
+  },
+  {
+    title: "Hit Pole",
+    description: "Une WebApp permettant la réservation en ligne de cours de pole dance, avec gestion de comptes et de soldes.",
+    date: "Août 2022",
+    technologies: ["Firebase", "React"],
+    objective: "Fournir un système de réservation pour une école de pole dance",
+    links: {
+      site: "https://hit-pole.web.app/",
+      github: ["https://github.com/quent36987/Hit_Pole"]
+    },
+    images: ["image1.png", "image2.png", "image3.png"]
+  },
+  {
+    title: "Application de Sport",
+    description: "Une application pour créer et suivre des programmes sportifs, avec des fonctionnalités de gestion de comptes, de suivi, et de partage de séances.",
+    date: "Mai 2022",
+    technologies: ["TypeScript", "Firebase"],
+    objective: "Découvrir React",
+    links: {
+      site: "https://sport-apli.web.app/",
+      github: ["https://github.com/quent36987/App_Typescript"]
+    },
+    images: ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png"]
+  },
+];
+---
+
+<Layout title="Mon Portfolio">
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+    <div class="text-center mb-16">
+      <h1 class="text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
+        Mon Portfolio
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-8">
+        Découvrez mon parcours à travers mes différents projets de développement,
+        des plus récents aux plus anciens.
+      </p>
+      
+      <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 max-w-2xl mx-auto text-sm text-gray-600">
+        <p>
+          Ces projets représentent mon parcours d'apprentissage en développement. Certains ont été réalisés alors que je débutais, 
+          et peuvent donc contenir des imperfections tant au niveau du code que de la sécurité. Ils témoignent de mon évolution 
+          et de ma passion pour l'apprentissage continu. 🚀
+        </p>
+      </div>
+    </div>
+
+    <div class="relative pl-4">
+      {projects.map((project) => (
+        <TimelineCard {...project} />
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    min-height: calc(100vh - 4rem);
+  }
+</style>

@@ -1,0 +1,7 @@
+version: '3'
+services:
+  astro-app:
+    image: ghcr.io/quent36987/portfolio-web:latest
+    ports:
+      - "5698:8080"
+    container_name: astro-app
