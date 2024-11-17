@@ -21,11 +21,11 @@ const projects = [
     objective: "Développer une application de partage de recettes en ligne, avec une architecture bien structurée",
     links: {
       site: "https://cook-we.home.quentinou.ovh/home",
-      github: [
-        "https://github.com/quent36987/cook-we",
-        "https://github.com/quent36987/cook-we-app",
-        "https://github.com/quent36987/cook-we-config"
-      ]
+      github: {
+        backend: "https://github.com/quent36987/cook-we",
+        frontend: "https://github.com/quent36987/cook-we-app",
+        config: "https://github.com/quent36987/cook-we-config"
+      }
     },
     images: ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png"]
   },
@@ -37,11 +37,10 @@ const projects = [
     objective: "Découvrir Medusa et mettre en place un système de gestion e-commerce complet",
     links: {
       site: "https://cybermaniac.fr/",
-      github: [
-        "https://github.com/quent36987/cybermaniac-site-web",
-        "https://github.com/quent36987/cybermaniac-store",
-        "https://github.com/quent36987/cybermaniac-site-v2"
-      ]
+      github: {
+        frontend: "https://github.com/quent36987/cybermaniac-site-web",
+        backend: "https://github.com/quent36987/cybermaniac-store",
+      }
     },
     images: ["image1.png", "image2.png"]
   },
@@ -52,9 +51,9 @@ const projects = [
     technologies: ["Svelte", "JavaScript", "TypeScript", "Supabase", "Three.js"],
     objective: "Développer une application de simulation pour configurer et visualiser des installations de panneaux LED avec des animations personnalisées.",
     links: {
-      github: [
-        "https://github.com/quent36987/EpiLed"
-      ]
+      github: {
+        main: "https://github.com/quent36987/EpiLed"
+      }
     },
     images: ["image1.png", "image2.png"],
   },
@@ -65,7 +64,9 @@ const projects = [
     technologies: ["TypeScript", "WebSocket", "HTML", "CSS", "Apache"],
     objective: "Découvrir les WebSockets et la création de jeux multijoueurs en temps réel",
     links: {
-      github: ["https://github.com/quent36987/web-diamant"]
+      github: {
+        main: "https://github.com/quent36987/web-diamant"
+      }
     },
     images: ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png"]
   },
@@ -76,9 +77,24 @@ const projects = [
     technologies: ["Python", "API Vélov", "Notifications"],
     objective: "Créer un outil pratique pour optimiser mes déplacements quotidiens",
     links: {
-      github: ["https://github.com/quent36987/Noti-Velo"]
+      github: {
+        main: "https://github.com/quent36987/Noti-Velo"
+      }
     },
-    images: ["image1.png", "image2.png", "image3.png"]
+    images: ["image1.png"]
+  },
+  {
+    title: "Roulette App",
+    description: "Application de roulette en ligne (sans argent) permettant de miser et de jouer à plusieurs, avec un chat en ligne.",
+    date: "Septembre 2022",
+    technologies: ["Vue.js", "WebSocket"],
+    objective: "Découvrir Vue.js et comprendre son fonctionnement à travers le développement d'un jeu interactif en ligne.",
+    links: {
+      github: {
+        main: "https://github.com/quent36987/App-VueJs"
+      }
+    },
+    images: ["image1.png"],
   },
   {
     title: "Hit Pole",
@@ -88,7 +104,9 @@ const projects = [
     objective: "Fournir un système de réservation pour une école de pole dance",
     links: {
       site: "https://hit-pole.web.app/",
-      github: ["https://github.com/quent36987/Hit_Pole"]
+      github: {
+        main: "https://github.com/quent36987/Hit_Pole"
+      }
     },
     images: ["image1.png", "image2.png", "image3.png"]
   },
@@ -100,7 +118,9 @@ const projects = [
     objective: "Découvrir React",
     links: {
       site: "https://sport-apli.web.app/",
-      github: ["https://github.com/quent36987/App_Typescript"]
+      github: {
+        main: "https://github.com/quent36987/App_Typescript"
+      }
     },
     images: ["image1.png", "image2.png", "image3.png", "image4.png", "image5.png", "image6.png"]
   },
